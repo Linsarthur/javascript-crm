@@ -1,0 +1,31 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Arthur Cavalcante",
+            "email": "arthur@teste.com",
+            "status": "Ativo"
+        },
+        {
+            "id": 2,
+            "name": "Ceiçinha designer",
+            "email": "Ceiça@teste.com",
+            "status": "Inativo"
+        }
+    ],
+    "products":[
+        {
+            "id":1,
+            "nome": "Frango assado",
+            "preco": 30,
+            "descricao": "Um suculento frango assado na brasa."
+        },
+        {
+            
+            "id":2,
+            "nome": "Tilapia assado",
+            "preco": 55,
+            "descricao": "Tilapia assada na brasa, bastante saborosa."
+        }
+    ]
+}
