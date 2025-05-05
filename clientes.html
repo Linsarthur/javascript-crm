@@ -21,31 +21,46 @@
                     onclick="mudarParaClientes()" id="clients">Clientes</a>
                 <a href="#" class="hover:bg-white hover:text-amber-700" onclick="mudarParaProdutos()">Produtos</a>
             </nav>
-
         </header>
         <div class="flex-1 p-16">
-            <h2 class="flex justify-between items-center text-[26px] font-semibold ">
+            <h2 class="mb-[px] flex justify-between items-center text-[26px] font-semibold ">
                 Clientes
                 <button onclick="mostrarOverlay()"
-                    class="bg-[#E7901D] leading-[40px] rounded text-white px-6 text-[12px] uppercase font-bold hover:bg-[#871D1F]">Novo
+                    class="mb-[33px] bg-[#E7901D] leading-[40px] rounded text-white px-6 text-[12px] uppercase font-bold hover:bg-[#871D1F]">Novo
                     cliente</button>
             </h2>
-            <div>
-                <table class="w-full h-full" <thead>
-                    <tr class="text-[#871D1F] text-left p-0">
-                        <th class="mr-[20px]">Id</th>
-                        <th class="mr-[192px]">Nome</th>
-                        <th class="mr-[200px]">Email</th>
-                        <th class="mr-[100px]">Status</th>
-                        <th class="mr-[20px]">Ações</th>
-                    </tr>
+            <div class="">
+                <table class="w-full mt-4 rounded overflow-hidden">
+                    <thead class="*:leading-[40px]  text-left bg-red-800 text-white">
+                        <th class="">Nome</th>
+                        <th class="">Email</th>
+                        <th class="">Telefone</th>
+                        <th class="">Última compra</th>
+                        <th class="w-[100px] flex justify-center gap-4">Ações</th>
                     </thead>
-                    <tbody id="user-table-body" class="table-auto">
-
+                    <tbody id="tabela" class="[&>*:nth-child(even)]:bg-black/5">
+                        <tr class="*:leading-[40px]">
+                            <td>Conrado</td>
+                            <td>conrado@gmail.com</td>
+                            <td>(00) 0000-0000</td>
+                            <td>05/05/2025</td>
+                            <td class="w-[100px] flex justify-center items-center gap-4">
+                                <box-icon name="pencil"></box-icon>
+                                <box-icon name="trash"></box-icon>
+                            </td>
+                        </tr>
+                        <tr class="*:leading-[40px]">
+                            <td>Conrado</td>
+                            <td>conrado@gmail.com</td>
+                            <td>(00) 0000-0000</td>
+                            <td>05/05/2025</td>
+                            <td class="w-[100px] flex justify-center gap-4">
+                                <box-icon name="pencil"></box-icon>
+                                <box-icon name="trash"></box-icon>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-
-
             </div>
             <div onclick="mostrarOverlay()" id="overlay"
                 class="w-full h-full bg-black/70 absolute top-0 left-0 duration-200 opacity-0 invisible"></div>

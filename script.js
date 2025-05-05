@@ -1,20 +1,20 @@
-fetch("http://localhost:3000/users").then(res => res.json()).then(data => {
-    const tbody = document.querySelector("#user-table-body");
-    data.forEach(user => {
-        const row = document.createElement('tr');
+// fetch("http://localhost:3000/users").then(res => res.json()).then(data => {
+//     const tbody = document.querySelector("#user-table-body");
+//     data.forEach(user => {
+//         const row = document.createElement('tr');
 
-        row.innerHTML = `
+//         row.innerHTML = `
         
-            <td>${user.id}</td>
-            <td>${user.name}</td>
-            <td>${user.email}</td>
-            <td>${user.status}</td>
+           
+//             <td>${user.name}</td>
+//             <td>${user.email}</td>
+//             <td>${user.status}</td>
         
-        `;
+//         `;
 
-        tbody.appendChild(row)
-    });
-})
+//         tbody.appendChild(row)
+//     });
+// })
 
 
 function mostrarOverlay() {
