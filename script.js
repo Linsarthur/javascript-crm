@@ -4,12 +4,12 @@ fetch("http://localhost:3000/users").then(res => res.json()).then(data => {
         const row = document.createElement('tr');
 
         row.innerHTML = `
-        <tr class="flex justify-between">
-            <td class="px-4 py-2">${user.id}</td>
-            <td class="px-4 py-2">${user.name}</td>
-            <td class="px-4 py-2">${user.email}</td>
-            <td class="px-4 py-2">${user.status}</td>
-        </tr>
+        
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.status}</td>
+        
         `;
 
         tbody.appendChild(row)
