@@ -1,24 +1,5 @@
 
-let clientes = [
-    {
-        nome: "Conrado",
-        email: "conrado@gmail.com",
-        telefone: "(85) 00000-0000",
-        data: "05/05/2025"
-    },
-    {
-        nome: "Emanuel",
-        email: "emanuel@gmail.com",
-        telefone: "(85) 00000-0000",
-        data: "05/05/2025"
-    },
-    {
-        nome: "Ana",
-        email: "ana@gmail.com",
-        telefone: "(85) 00000-0000",
-        data: "05/05/2025"
-    }
-];
+let clientes = JSON.parse(sessionStorage.getItem("clientes")) || [];
 
 function carregarClientes(listaDeClientes) {
     let tbodyElement = document.querySelector("#tabela");
