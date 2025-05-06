@@ -1,5 +1,5 @@
 
-let clientes = JSON.parse(sessionStorage.getItem("clientes")) || [];
+let clientes = sessionStorage.getItem("clientes") ? JSON.parse(sessionStorage.getItem("clientes")) : [];
 
 function carregarClientes(listaDeClientes) {
     let tbodyElement = document.querySelector("#tabela");
@@ -28,6 +28,7 @@ function addClientes(form) {
     let cliente = Object.fromEntries(formData.entries());
 
     clientes.push(cliente)
+    sessionStorage.setItem("clientes", JSON.stringify(clientes))
     mostrarOverlay()
     carregarClientes(clientes)
 }
