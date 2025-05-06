@@ -39,26 +39,7 @@
                         <th class="w-[100px] flex justify-center gap-4">Ações</th>
                     </thead>
                     <tbody id="tabela" class="[&>*:nth-child(even)]:bg-black/5">
-                        <tr class="*:leading-[40px]">
-                            <td>Conrado</td>
-                            <td>conrado@gmail.com</td>
-                            <td>(00) 0000-0000</td>
-                            <td>05/05/2025</td>
-                            <td class="w-[100px] flex justify-center items-center gap-4">
-                                <box-icon name="pencil"></box-icon>
-                                <box-icon name="trash"></box-icon>
-                            </td>
-                        </tr>
-                        <tr class="*:leading-[40px]">
-                            <td>Conrado</td>
-                            <td>conrado@gmail.com</td>
-                            <td>(00) 0000-0000</td>
-                            <td>05/05/2025</td>
-                            <td class="w-[100px] flex justify-center gap-4">
-                                <box-icon name="pencil"></box-icon>
-                                <box-icon name="trash"></box-icon>
-                            </td>
-                        </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -72,16 +53,27 @@
                         onclick="mostrarOverlay()" name='x'></box-icon>
                 </h3>
 
-                <div class="flex flex-col ml-[20px]">
-                    <label for="nomeUsuario">Nome</label>
-                    <input class="mb-[15px] border-solid border-[#D9D9D9] border-[1px] rounded type=" text"
-                        name="nomeUsuario" id="nomeUsuario">
-                    <label for="emailUsuario">Email</label>
-                    <input class="border-solid border-[#D9D9D9] border-[1px] rounded" type="text" name="emailUsuario"
-                        id="emailUsuario">
+                <form class="flex flex-col ml-[20px]" onsubmit="addClientes(event.target)">
+                    <label class="block mb-2" for="nome">Nome</label>
+                    <input
+                        class="w-full focus:outline-[#871D1F] p-1 mb-[15px] border-solid border-[#D9D9D9] border-[1px] rounded"
+                        required type="text" name="nome" placeholder="Digite seu nome">
+
+                    <label class="block mb-2" for="email">Email</label>
+                    <input
+                        class="w-full focus:outline-[#871D1F] p-1 mb-[15px] border-solid border-[#D9D9D9] border-[1px] rounded"
+                        required type="text" name="email" placeholder="Digite seu email">
+                    <label class="block mb-2" for="telefone">Telefone</label>
+                    <input
+                        class="w-full focus:outline-[#871D1F] p-1 mb-[15px] border-solid border-[#D9D9D9] border-[1px] rounded"
+                        required type="text" name="telefone" placeholder="(85) 99999-9999">
+                    <label class="block mb-2" for="data">Data de nascimento</label>
+                    <input
+                        class="w-full focus:outline-[#871D1F] p-1  mb-[15px] border-solid border-[#D9D9D9] border-[1px] rounded"
+                        required type="text" name="data" placeholder="DD/MM/YYYY">
                     <button
                         class="bg-[#871D1F] rounded-[6px] h-[35px] text-[#E7901D] font-bold mt-[20px]">Criar</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -91,6 +83,7 @@
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="script.js"></script>
+    <script src="clientes.js"></script>
 </body>
 
 </html>
