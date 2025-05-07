@@ -22,16 +22,29 @@ function carregarClientes(listaDeClientes) {
 
 carregarClientes(clientes);
 
-function cadastrarCliente(form){
+function cadastrarCliente(form) {
     event.preventDefault();
 
     // vão pegar os valores dos inputs do formulario e transformar em um objeto
     let formData = new FormData(form);
     let cliente = Object.fromEntries(formData.entries());
-    
+
     // inserir o novo cliente no final do arrray clientes
     clientes.push(cliente);
     sessionStorage.setItem("clientes", JSON.stringify(clientes));
     mostrarOverlay();
     carregarClientes(clientes);
 }
+
+function buscarClientes() {
+    let req = fetch("http://localhost:3000/clientes")
+        .then((res) =>  res.json())
+        .then((lista) => {
+            clientes = lista
+            carregarClientes(clientes)
+        })
+
+   
+}
+
+buscarClientes();
